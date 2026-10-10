@@ -163,3 +163,27 @@ Salida:
 Suma: 14
 Multiplicación: 40
 ```
+
+---
+
+## Ejercicio 5
+
+> Crea un `Predicate` que determine si un número es mayor que 100.
+
+Código: [src/ejercicio5/](src/ejercicio5/)
+
+`Predicate<T>` es una interfaz funcional del JDK (`java.util.function`) cuyo método `test(T)`
+devuelve un `boolean`.
+
+```java
+Predicate<Integer> mayorQue100 = n -> n > 100;
+```
+
+Se prueba con varios valores, incluido el caso límite `100`, que no es mayor que 100:
+
+```
+50 > 100: false
+100 > 100: false
+101 > 100: true
+250 > 100: true
+```
