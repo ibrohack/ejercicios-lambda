@@ -1,5 +1,17 @@
 # Ejercicios de lambdas
 
+## Autores
+
+- Aritz Navarro
+- Brayan Romero
+- Ivan Vivanco
+
+## Repositorio GitHub
+
+<https://github.com/ibrohack/ejercicios-lambda>
+
+## Descripción
+
 Resolución de los ejercicios del documento *Ejercicios de lambdas.docx* (expresiones lambda e
 interfaces funcionales en Java).
 
