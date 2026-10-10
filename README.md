@@ -34,6 +34,10 @@ java -cp bin ejercicio2.Main
 Cambia `ejercicio2` por el número del ejercicio que quieras ejecutar. También se puede ejecutar
 cada `Main` directamente desde VS Code con la extensión de Java.
 
+> Si en la consola de Windows las tildes salen mal (por ejemplo `Multiplicaci�n`), ejecuta con
+> `java -Dstdout.encoding=UTF-8 -cp bin ejercicio4.Main`. El problema es la codificación de la
+> consola, no el código.
+
 ---
 
 ## Ejercicio 1
