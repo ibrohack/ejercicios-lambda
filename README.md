@@ -134,3 +134,32 @@ Salida:
 10 - 4 = 6
 10 * 4 = 40
 ```
+
+---
+
+## Ejercicio 4
+
+> Crea el método `static int operar(int a, int b, Operacion operacion)`, que debe utilizar la
+> operación recibida para calcular el resultado. Después úsalo para realizar una suma y una
+> multiplicación.
+
+Código: [src/ejercicio4/](src/ejercicio4/)
+
+El método no sabe qué operación hace: solo llama a `calcular`. La lambda que se le pasa decide el
+comportamiento.
+
+```java
+static int operar(int a, int b, Operacion operacion) {
+    return operacion.calcular(a, b);
+}
+
+int suma = operar(10, 4, (a, b) -> a + b);
+int multiplicacion = operar(10, 4, (a, b) -> a * b);
+```
+
+Salida:
+
+```
+Suma: 14
+Multiplicación: 40
+```
