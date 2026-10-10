@@ -187,3 +187,44 @@ Se prueba con varios valores, incluido el caso límite `100`, que no es mayor qu
 101 > 100: true
 250 > 100: true
 ```
+
+---
+
+## Ejercicio 6
+
+> Tenemos `ArrayList<String> nombres`. Crea un `Predicate<String>` que determine si el nombre tiene
+> más de 4 letras, un `Consumer<String>` que muestre el nombre en mayúsculas, y recorre la lista
+> aplicando el `Consumer` solo a los nombres que cumplan el `Predicate`.
+
+Código: [src/ejercicio6/](src/ejercicio6/)
+
+La lista de ejemplo es `Ana, Luis, Carlos, Marta, Pedro, Eva, Alejandro`.
+
+```java
+Predicate<String> masDe4Letras = nombre -> nombre.length() > 4;
+Consumer<String> mostrarMayusculas = nombre -> System.out.println(nombre.toUpperCase());
+
+for (String nombre : nombres) {
+    if (masDe4Letras.test(nombre)) {
+        mostrarMayusculas.accept(nombre);
+    }
+}
+```
+
+Como extra, se muestra que el mismo recorrido se puede hacer con streams, pasando el `Predicate` a
+`filter` y el `Consumer` a `forEach`:
+
+```java
+nombres.stream()
+        .filter(masDe4Letras)
+        .forEach(mostrarMayusculas);
+```
+
+Salida (los dos recorridos dan el mismo resultado):
+
+```
+CARLOS
+MARTA
+PEDRO
+ALEJANDRO
+```
