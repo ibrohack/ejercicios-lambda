@@ -79,3 +79,32 @@ System.out.println(suma.calcular(10, 4)); // 14
 ```
 
 Los ejercicios 2, 3 y 4 usan interfaces funcionales propias (`OperacionSuma` y `Operacion`).
+
+---
+
+## Ejercicio 2
+
+> Crea una interfaz funcional para obtener la suma de tres números y pon un ejemplo de uso de la
+> lambda correspondiente.
+
+Código: [src/ejercicio2/](src/ejercicio2/)
+
+**Nota:** el enunciado pide sumar **tres** números, pero el ejemplo del documento declara
+`int calcular(int a, int b)` con solo dos parámetros. Se ha seguido el texto del enunciado, así que
+el método recibe tres parámetros:
+
+```java
+@FunctionalInterface
+public interface OperacionSuma {
+    int calcular(int a, int b, int c);
+}
+
+OperacionSuma suma = (a, b, c) -> a + b + c;
+```
+
+Salida:
+
+```
+1 + 2 + 3 = 6
+10 + 20 + 30 = 60
+```
