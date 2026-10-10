@@ -108,3 +108,29 @@ Salida:
 1 + 2 + 3 = 6
 10 + 20 + 30 = 60
 ```
+
+---
+
+## Ejercicio 3
+
+> Utilizando la interfaz `Operacion`, crea tres lambdas: suma, resta y multiplicación. Prueba las
+> tres con 10 y 4.
+
+Código: [src/ejercicio3/](src/ejercicio3/)
+
+El documento no define la interfaz `Operacion`, así que se declara con la misma firma que el ejemplo
+del ejercicio 2, `int calcular(int a, int b)`:
+
+```java
+Operacion suma = (a, b) -> a + b;
+Operacion resta = (a, b) -> a - b;
+Operacion multiplicacion = (a, b) -> a * b;
+```
+
+Salida:
+
+```
+10 + 4 = 14
+10 - 4 = 6
+10 * 4 = 40
+```
